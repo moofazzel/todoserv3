@@ -1,22 +1,7 @@
 import { BiCheckDouble, BiEditAlt } from "react-icons/bi";
-// import { AiOutlineDelete } from "react-icons/ai";
-
-// import { Dropdown } from "@nextui-org/react";
 
 const MyTasks = ({ tasks }) => {
-  const { task, _id } = tasks;
-
-  const deleteTask = async (taskID) => {
-    fetch(`http://localhost:5000/task/${taskID}`, {
-      method: "DELETE",
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        window.location.reload();
-        console.log(data);
-      })
-      .catch((err) => console.log(err));
-  };
+  const { task } = tasks;
 
   return (
     <>
