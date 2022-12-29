@@ -1,5 +1,18 @@
-import '../styles/globals.css'
+// import { NextUIProvider } from "@nextui-org/react";
+import AuthProvider from "../context/AuthProvider";
 
-export default function App({ Component, pageProps }) {
-  return <Component {...pageProps} />
+import Header from "../components/Header";
+// import "../styles/globals.css";
+
+function MyApp({ Component, pageProps }) {
+  return (
+    // <NextUIProvider>
+    <AuthProvider>
+      <Header />
+      /<Component {...pageProps} />
+    </AuthProvider>
+    // </NextUIProvider>
+  );
 }
+
+export default MyApp;
