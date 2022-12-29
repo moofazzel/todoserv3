@@ -1,7 +1,7 @@
 import { BiCheckDouble, BiEditAlt } from "react-icons/bi";
-import { AiOutlineDelete } from "react-icons/ai";
+// import { AiOutlineDelete } from "react-icons/ai";
 
-import { Dropdown } from "@nextui-org/react";
+// import { Dropdown } from "@nextui-org/react";
 
 const MyTasks = ({ tasks }) => {
   const { task, _id } = tasks;
@@ -28,38 +28,6 @@ const MyTasks = ({ tasks }) => {
           <span className="text-lg inline-flex px-2 text-gray-700">{task}</span>
 
           {/* <button className="ml-auto mr-3"></button> */}
-
-          <Dropdown className="ml-20">
-            <Dropdown.Button
-              css={{
-                borderRadius: "$xs",
-                border: "$space$1 solid transparent",
-                background: "$pink800",
-                color: "$purple600",
-                "&:hover": {
-                  color: "$blue600",
-                  color: "$blue600",
-                },
-              }}
-              className="ml-auto"
-            ></Dropdown.Button>
-
-            <Dropdown.Menu aria-label="Actions" variant="light">
-              <Dropdown.Item key="edit">
-                <span className="flex items-center">
-                  <BiEditAlt /> Edit
-                </span>
-              </Dropdown.Item>
-              <Dropdown.Item key="delete" color="error">
-                <span
-                  onClick={() => deleteTask(_id)}
-                  className="flex items-center"
-                >
-                  <AiOutlineDelete /> Delete
-                </span>
-              </Dropdown.Item>
-            </Dropdown.Menu>
-          </Dropdown>
         </div>
       </div>
     </>
