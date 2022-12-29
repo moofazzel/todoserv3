@@ -20,19 +20,7 @@ const my_task = () => {
             {/* <button className="ml-auto mr-3"></button> */}
 
             <Dropdown>
-              <Dropdown.Button
-                css={{
-                  borderRadius: "$xs",
-                  border: "$space$1 solid transparent",
-                  background: "$pink800",
-                  color: "$purple600",
-                  "&:hover": {
-                    color: "$blue600",
-                    color: "$blue600",
-                  },
-                }}
-                className="ml-auto"
-              ></Dropdown.Button>
+              <Dropdown.Button className="ml-auto"></Dropdown.Button>
 
               <Dropdown.Menu aria-label="Actions" variant="light">
                 <Dropdown.Item key="edit">
