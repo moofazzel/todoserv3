@@ -2,14 +2,14 @@
 import AuthProvider from "../context/AuthProvider";
 
 import Header from "../components/Header";
-// import "../styles/globals.css";
+import "../styles/globals.css";
 
 function MyApp({ Component, pageProps }) {
   return (
     // <NextUIProvider>
     <AuthProvider>
       <Header />
-      /<Component {...pageProps} />
+      <Component {...pageProps} />
     </AuthProvider>
     // </NextUIProvider>
   );
