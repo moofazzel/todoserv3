@@ -9,7 +9,7 @@ const AddTask = () => {
 
     const taskData = {
       task: task,
-      status: null,
+      status: false,
       image: "photoURL",
     };
 
