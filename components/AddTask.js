@@ -1,9 +1,7 @@
-import { createRef, useContext, useRef, useState } from "react";
+import { useContext } from "react";
 import { toast } from "react-hot-toast";
-import { BiPlus } from "react-icons/bi";
 import { AuthContext } from "../context/AuthProvider";
 import { useForm } from "react-hook-form";
-import { Toaster } from "react-hot-toast";
 
 const AddTask = () => {
   const { user } = useContext(AuthContext);
@@ -39,7 +37,7 @@ const AddTask = () => {
             image: imgData.data.url,
           };
           // save all task data to database
-          fetch(`http://localhost:5000/add_task`, {
+          fetch(`https://todoser-server.vercel.app/add_task`, {
             method: "POST",
             headers: {
               "content-type": "application/json",
