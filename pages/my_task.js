@@ -2,22 +2,12 @@ import { BiCheckDouble, BiEditAlt } from "react-icons/bi";
 import { AiOutlineDelete } from "react-icons/ai";
 import { Dropdown } from "@nextui-org/react";
 
-export const getStaticProps = async () => {
-  const res = await fetch("http://localhost:5000/all_tasks");
-  const data = await res.json();
-  return {
-    props: {
-      data,
-    },
-  };
-};
-
-const my_task = ({ data }) => {
-  console.log(data);
+const my_task = ({ tasks }) => {
+  console.log(tasks);
   return (
     <>
       <div className="container pt-20">
-        {data.map((task) => {
+        {tasks.map((task) => {
           return (
             <div key={task._id} className="md:w-[90%] mx-auto mb-3 ">
               <div className="w-full inline-flex items-center bg-white leading-none rounded-xl p-2 pl-4 shadow text-teal text-sm group/edit">
@@ -58,5 +48,15 @@ const my_task = ({ data }) => {
     </>
   );
 };
+
+export async function getStaticProps() {
+  const res = await fetch("http://localhost:5000/all_tasks");
+  const data = await res.json();
+  return {
+    props: {
+      tasks: data,
+    },
+  };
+}
 
 export default my_task;
