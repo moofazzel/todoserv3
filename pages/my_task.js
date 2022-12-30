@@ -1,7 +1,6 @@
 import { BiCheckDouble, BiEditAlt } from "react-icons/bi";
 import { AiOutlineDelete } from "react-icons/ai";
 import { Dropdown } from "@nextui-org/react";
-import { data } from "autoprefixer";
 
 export const getStaticProps = async () => {
   const res = await fetch("http://localhost:5000/all_tasks");
