@@ -4,13 +4,19 @@ import AuthProvider from "../context/AuthProvider";
 import Header from "../components/Header";
 import "../styles/globals.css";
 
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+
+const queryClient = new QueryClient();
+
 function MyApp({ Component, pageProps }) {
   return (
     // <NextUIProvider>
-    <AuthProvider>
-      <Header />
-      <Component {...pageProps} />
-    </AuthProvider>
+    <QueryClientProvider client={queryClient}>
+      <AuthProvider>
+        <Header />
+        <Component {...pageProps} />
+      </AuthProvider>
+    </QueryClientProvider>
     // </NextUIProvider>
   );
 }
