@@ -34,10 +34,10 @@ const AddTask = () => {
           // data
           const task = {
             task: data.task,
+            status: false,
             email,
             image: imgData.data.url,
           };
-          console.log(task);
           // save all task data to database
           fetch(`http://localhost:5000/add_task`, {
             method: "POST",
@@ -50,7 +50,7 @@ const AddTask = () => {
             .then((result) => {
               console.log(result);
 
-              toast.success(`Your Task is added successfully`);
+              toast.success("Task added");
               // navigate('/dashboard/manageDoctors')
               e.target.reset();
             });
