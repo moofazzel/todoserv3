@@ -1,4 +1,5 @@
 import Head from "next/head";
+import { Toaster } from "react-hot-toast";
 import AddTask from "../components/AddTask";
 
 export default function Home() {
@@ -12,6 +13,8 @@ export default function Home() {
       </Head>
 
       <AddTask />
+
+      <Toaster position="top-center" reverseOrder={false} />
     </>
   );
 }

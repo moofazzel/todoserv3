@@ -92,7 +92,7 @@ const Login = () => {
                   type="email"
                   id="email"
                   autoFocus
-                  className="px-4 py-2 text-black dark:text-gray-200 transition duration-300 border border-violet-300 rounded-xl focus:border-transparent focus:outline-none focus:ring-2 focus:ring-primary"
+                  className="px-4 py-2 text-black darkk:text-gray-200 transition duration-300 border border-violet-300 rounded-xl focus:border-transparent focus:outline-none focus:ring-2 focus:ring-primary"
                 />
               </div>
               <div className="flex flex-col space-y-1">
@@ -114,7 +114,7 @@ const Login = () => {
                   name="password"
                   type="password"
                   id="password"
-                  className="px-4 py-2 text-black dark:text-gray-200 transition duration-300 border border-violet-300 rounded-xl focus:border-transparent focus:outline-none focus:ring-2 focus:ring-primary"
+                  className="px-4 py-2 text-black darkk:text-gray-200 transition duration-300 border border-violet-300 rounded-xl focus:border-transparent focus:outline-none focus:ring-2 focus:ring-primary"
                 />
               </div>
               <div className="flex items-center space-x-2">

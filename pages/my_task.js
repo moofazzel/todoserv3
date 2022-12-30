@@ -21,14 +21,23 @@ const my_task = () => {
     },
   });
 
-  console.log(allTasks);
+  const deleteTask = async (taskID) => {
+    fetch(`http://localhost:5000/task/${taskID}`, {
+      method: "DELETE",
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        refetch();
+      })
+      .catch((err) => console.log(err));
+  };
 
   return (
     <>
       <div className="container pt-20">
         <div className="md:w-[90%] mx-auto mb-3 ">
           {allTasks.map((task) => (
-            <div className="w-full inline-flex items-center bg-white leading-none rounded-xl p-2 pl-4 shadow text-teal text-sm group/edit">
+            <div className="w-full inline-flex items-center bg-white leading-none rounded-xl p-2 pl-4 shadow text-teal text-sm group/edit mb-3">
               <button className="inline-flex border border-gray-700 text-white rounded-xl h-5 w-5 hover:w-6 hover:h-6 justify-center items-center hover:transition-all hover:duration-300 group/item mr-1">
                 <BiCheckDouble className="hidden group-hover/item:block hover:text-xl text-green-500 hover:transition-all hover:duration-500" />
               </button>
@@ -49,7 +58,7 @@ const my_task = () => {
                   </Dropdown.Item>
                   <Dropdown.Item key="delete" color="error">
                     <span
-                      onClick={() => deleteTask(_id)}
+                      onClick={() => deleteTask(task._id)}
                       className="flex items-center"
                     >
                       <AiOutlineDelete /> Delete
