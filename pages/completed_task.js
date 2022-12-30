@@ -1,5 +1,3 @@
-import { useContext, useState } from "react";
-
 import { BiCheckDouble, BiCommentDetail } from "react-icons/bi";
 import { AiOutlineDelete } from "react-icons/ai";
 import { MdRemoveDone } from "react-icons/md";
@@ -12,6 +10,7 @@ import {
   Textarea,
   Tooltip,
 } from "@nextui-org/react";
+import { useState } from "react";
 
 const completed_task = () => {
   const [visible, setVisible] = useState(false);
