@@ -101,7 +101,7 @@ const Register = () => {
                     type="email"
                     id="email"
                     autoFocus
-                    className="px-4 py-2 text-black dark:text-gray-200 transition duration-300 border border-violet-300 rounded-full focus:border-transparent focus:outline-none focus:ring-2 focus:ring-primary"
+                    className="px-4 py-2 text-black dark:text-gray-200 transition duration-300 border border-violet-300 rounded-xl focus:border-transparent focus:outline-none focus:ring-2 focus:ring-primary"
                   />
                 </div>
                 <div className="flex flex-col space-y-1">
@@ -117,7 +117,7 @@ const Register = () => {
                     type="URL"
                     id="PhotoURL"
                     autoFocus
-                    className="px-4 py-2 text-black dark:text-gray-200 transition duration-300 border border-violet-300 rounded-full focus:border-transparent focus:outline-none focus:ring-2 focus:ring-primary"
+                    className="px-4 py-2 text-black dark:text-gray-200 transition duration-300 border border-violet-300 rounded-xl focus:border-transparent focus:outline-none focus:ring-2 focus:ring-primary"
                   />
                 </div>
                 <div className="flex flex-col space-y-1">
@@ -133,7 +133,7 @@ const Register = () => {
                     type="text"
                     id="fullName"
                     autoFocus
-                    className="px-4 py-2 text-black dark:text-gray-200 transition duration-300 border border-violet-300 rounded-full focus:border-transparent focus:outline-none focus:ring-2 focus:ring-primary"
+                    className="px-4 py-2 text-black dark:text-gray-200 transition duration-300 border border-violet-300 rounded-xl focus:border-transparent focus:outline-none focus:ring-2 focus:ring-primary"
                   />
                 </div>
                 <div className="flex flex-col space-y-1">
@@ -150,7 +150,7 @@ const Register = () => {
                     name="password"
                     type="password"
                     id="password"
-                    className="px-4 py-2 text-black dark:text-gray-200 transition duration-300 border border-violet-300 rounded-full focus:border-transparent focus:outline-none focus:ring-2 focus:ring-primary"
+                    className="px-4 py-2 text-black dark:text-gray-200 transition duration-300 border border-violet-300 rounded-xl focus:border-transparent focus:outline-none focus:ring-2 focus:ring-primary"
                   />
                 </div>
 
@@ -178,14 +178,14 @@ const Register = () => {
                   <button
                     disabledd
                     type="submit"
-                    className=" w-full px-4 py-2 text-lg font-semibold text-white transition-colors duration-300 bg-primary rounded-full shadow-xl hover:bg-violet-800 focus:outline-none focus:ring-blue-200 focus:ring-4 mb-4 disabled:bg-gray-500"
+                    className=" w-full px-4 py-2 text-lg font-semibold text-white transition-colors duration-300 bg-primary rounded-xl shadow-xl hover:bg-violet-800 focus:outline-none focus:ring-blue-200 focus:ring-4 mb-4 disabled:bg-gray-500"
                   >
                     Register
                   </button>
                   <Link
                     href="#"
                     onClick={handleGoogleLogin}
-                    className="flex items-center justify-center px-4 py-2 space-x-2 transition-colors duration-300 border border-blue-500 group hover:bg-[#237539]  focus:outline-none  rounded-full"
+                    className="flex items-center justify-center px-4 py-2 space-x-2 transition-colors duration-300 border border-blue-500 group hover:bg-[#237539]  focus:outline-none  rounded-xl"
                   >
                     <button className="flex items-center text-sm font-medium text-[#319f4f] group-hover:text-white">
                       <FcGoogle className="text-xl mr-1" />

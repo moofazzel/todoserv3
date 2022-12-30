@@ -107,7 +107,7 @@ export default function Header() {
               </Dropdown.Menu>
             </Dropdown>
           ) : (
-            <span>Login</span>
+            <Link href="/login">Login</Link>
           )}
         </Navbar.Content>
         <Navbar.Collapse>
